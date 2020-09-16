@@ -1,12 +1,14 @@
 version: '3.7'
 services:
   frontend:
+    image: maccpr7/frontend:latest
     build: ./frontend
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
   backend:
+    image: maccpr7/backend:latest
     build: ./backend
     ports:
     - target: 5001
@@ -17,6 +19,7 @@ services:
       SECRET_KEY: ${SECRET_KEY}
       TEST_DATABASE_URI: ${TEST_DATABASE_URI}
   mysql:
+    image: maccpr7/database:latest
     build: ./database
     ports:
     - target: 3306
