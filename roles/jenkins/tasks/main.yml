@@ -1,4 +1,10 @@
-    - name: Make all scripts executable
-      shell: chmod +x ./scripts/install-jenkins.sh
-    - name: Install Jenkins
-      script: ./scripts/install-jenkins.sh
+    - name: Make script executable
+      shell: chmod +x ./scripts/jenkins-ie.sh
+    - name: install script
+      script: ./scripts/jenkins-ie.sh
+    - name: install packages
+      apt:
+        pkg:
+        - openjdk-8-jdk
+        - jenkins
+        update_cache: true
