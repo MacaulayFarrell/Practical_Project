@@ -1,0 +1,4 @@
+    - name: Make all scripts executable
+      shell: chmod +x ./scripts/*
+    - name: Install Jenkins
+      script: ./scripts/install-jenkins.sh
