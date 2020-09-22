@@ -27,7 +27,7 @@ pipeline{
             }
             stage('Environment setup'){
                 steps{
-                    sh "cd scripts/ && chmod +x docker-install.sh && ./docker-install.sh"
+                    sh "cd scripts/ && chmod +x docker-compose.sh && ./docker-compose.sh"
                 }
             }
 
