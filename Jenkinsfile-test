@@ -18,5 +18,5 @@ pipeline{
 		  sh "docker-compose exec backend pytest --cov application > pytest-results.txt"
 		}
 	   }
-
+  }
 }
