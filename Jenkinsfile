@@ -36,11 +36,5 @@ pipeline{
                     sh "docker-compose up -d"
                 }
             }
-           stage('Test Application'){
-                steps{ 
-		  sh "docker-compose exec backend pytest --cov application > pytest-results.txt"
-		}
-	   }
-
+   
 }
-
