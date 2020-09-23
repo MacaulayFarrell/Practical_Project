@@ -37,14 +37,10 @@ pipeline{
                 }
             }
            stage('Test Application'){
-                agent {
-                  docker {
-                    image 'python:3.7'
-                  }
-                }
-                steps{
-                    sh "pytest && pytest --cov application"
-                }
-            }
-        }    
+                steps{ 
+		  sh "docker-compose exec backend pytest --cov application > pytest-results.txt"
+		}
+	   }
+
 }
+
