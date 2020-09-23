@@ -36,15 +36,5 @@ pipeline{
                     sh "docker-compose up -d"
                 }
             }
-           stage('Test Application'){
-                agent {
-                  docker {
-                    image 'python:3.7'
-                  }
-                }
-                steps{
-                    sh "pytest && pytest --cov application"
-                }
-            }
-        }    
+   
 }
