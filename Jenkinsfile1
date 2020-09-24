@@ -12,7 +12,7 @@ pipeline{
                     then 
                       sh "cd Practical_Project && git pull"
                     else 
-                      sh "git clone github.com/MacaulayFarrell/Practical_Project.git && cd $_"
+                      sh "git clone github.com/MacaulayFarrell/Practical_Project.git && cd Practical_Project"
                     fi
                     cd scripts/ && chmod +x docker-install.sh && ./docker-install.sh
 EOF
