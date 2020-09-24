@@ -11,6 +11,7 @@ pipeline{
                     if [ -d "Practical_Project" ] 
                     then 
                       rm -r Practical_Project --force
+		      git clone https://github.com/MacaulayFarrell/Practical_Project.git && cd Practical_Project
                     else 
                       git clone https://github.com/MacaulayFarrell/Practical_Project.git && cd Practical_Project
                     fi
