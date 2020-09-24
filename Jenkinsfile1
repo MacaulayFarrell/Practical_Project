@@ -1,0 +1,47 @@
+//requires setting $user and $TESTVM variables in Jenkins 
+//as well as DATABASE_URI, TEST_DATABASE_URI, MYSQL_ROOT_PASSWORD, SECRET_KEY
+pipeline{
+        agent any
+        stages{
+
+            stage('Environment setup'){
+                steps{
+                    sh '''
+                    ssh $USER@$TESTVM <<EOF
+                    if [ -d "Practical_Project" ] 
+                    then 
+                      sh "cd Practical_Project && git pull"
+                    else 
+                      sh "git clone github.com/MacaulayFarrell/Practical_Project.git && cd $_"
+                    fi
+                    cd scripts/ && chmod +x docker-install.sh && ./docker-install.sh
+EOF
+                    '''
+                }
+            }
+
+            stage('Deploy Application'){
+                steps{
+                    sh '''
+                    ssh $USER@$TESTVM <<EOF
+                    export MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+                    export DATABASE_URI=$DATABASE_URI
+                    export TEST_DATABASE_URI=$TEST_DATABASE_URI
+                    export SECRET_KEY=$SECRET_KEY
+                    cd && cd Practical_Project
+                    docker-compose build && docker-compose up -d
+EOF
+                    '''
+                }
+            }
+           stage('Test Application'){
+                steps{ 
+		                 sh '''
+                     ssh $USER@$TESTVM <<EOF
+                     docker-compose exec backend pytest --cov application > pytest-results.txt
+EOF
+                     '''
+		      }
+	          }
+  }
+}
