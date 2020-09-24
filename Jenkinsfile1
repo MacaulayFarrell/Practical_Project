@@ -10,7 +10,7 @@ pipeline{
                     ssh $USER@$TESTVM <<EOF
                     if [ -d "Practical_Project" ] 
                     then 
-                      cd Practical_Project && git pull
+                      rm -r Practical_Project --force
                     else 
                       git clone https://github.com/MacaulayFarrell/Practical_Project.git && cd Practical_Project
                     fi
@@ -38,6 +38,7 @@ EOF
                 steps{ 
 		                 sh '''
                      ssh $USER@$TESTVM <<EOF
+		     cd && cd Practical_Project
                      docker-compose exec backend pytest --cov application > pytest-results.txt
 EOF
                      '''
