@@ -36,10 +36,10 @@ EOF
             }
            stage('Test Application'){
                 steps{ 
-		                 sh '''
+		     sh '''
                      ssh $USER@$TESTVM <<EOF
 		     cd && cd Practical_Project
-                     docker-compose exec backend pytest --cov application > pytest-results.txt
+                     docker-compose exec -T backend pytest --cov application > pytest-results.txt
 EOF
                      '''
 		      }
