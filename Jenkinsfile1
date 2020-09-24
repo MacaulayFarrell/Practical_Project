@@ -10,9 +10,9 @@ pipeline{
                     ssh $USER@$TESTVM <<EOF
                     if [ -d "Practical_Project" ] 
                     then 
-                      sh "cd Practical_Project && git pull"
+                      cd Practical_Project && git pull
                     else 
-                      sh "git clone https://github.com/MacaulayFarrell/Practical_Project.git && cd Practical_Project"
+                      git clone https://github.com/MacaulayFarrell/Practical_Project.git && cd Practical_Project
                     fi
                     cd scripts/ && chmod +x docker-install.sh && ./docker-install.sh
 EOF
