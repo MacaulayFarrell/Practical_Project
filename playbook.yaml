@@ -1,5 +1,5 @@
-- hosts: linux
+- hosts: localhost
   become: yes
   roles:
   - jenkins
-  - docker
+ 
