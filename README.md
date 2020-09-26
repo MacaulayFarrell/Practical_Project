@@ -41,10 +41,10 @@ Backlog:
 
 ## Tools used
 - AWS EC2 instance and RDS instances 
-- Jira 
-- Git
-- Jenkins
-- Docker/Docker Compose
+- Jira for project management 
+- Git and GitHub for version control
+- Jenkins for the CI server
+- Docker/Docker Compose for containerisation
 - Ansible
 - Terraform
 - NGINX
