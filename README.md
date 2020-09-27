@@ -10,6 +10,7 @@ This is the repo for my second SFIA project at the Academy.
 * [Documentation](#documentation)
    * [Kanban board](#kanban-board)
    * [CI Pipeline](#ci-pipeline)
+   * [Risk Assessment](#risk-assessment)
 * [Tools used](#tools-used)
 * [Issues](#issues)
    * [Future Improvements](#future-improvements)
@@ -32,12 +33,14 @@ The requirements for the application are the following:
 Tip: Click on screenshots to view them
 ### Kanban board 
 You can find a screenshot of the Kanban board built on Jira below:
-![shot-1](images/)
-![shot-2](images/)
-Backlog: 
-![backlog](images/)
+![shot-1](images/jira-1.JPG)
+![shot-2](images/jira-2.JPG)
+![shot-3](images/jira-3.JPG)
 
 ### CI Pipeline
+### Risk Assessment
+You can view the risk assessment for this project below:
+![risks](images/risk-assessment.JPG)
 
 ## Tools used
 - AWS EC2 instance and RDS instances 
