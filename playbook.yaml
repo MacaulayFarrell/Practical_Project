@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: linux
   become: yes
   roles:
   - jenkins
