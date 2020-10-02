@@ -9,7 +9,7 @@ pipeline{
                 steps{
                     script{
                         if (env.rollback == 'false'){
-                            image = docker.build("maccpr7/frontend")
+                            image = docker.build("maccpr7/frontend", "./frontend")
                         }
                     }
                 }          
