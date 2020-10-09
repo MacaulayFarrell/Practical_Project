@@ -12,8 +12,6 @@ This is the repo for my second SFIA project at the Academy.
    * [CI Pipeline](#ci-pipeline)
    * [Risk Assessment](#risk-assessment)
 * [Tools used](#tools-used)
-* [Issues](#issues)
-   * [Future Improvements](#future-improvements)
 ## Overview
 ### Brief
 The brief for this application is the following: To efficiently deploy a simple Flask application making use of a range of tools. 
@@ -55,8 +53,6 @@ You can view the risk assessment for this project below:
 - Terraform is a Infrastructure as Code tool that was used to create the infrastructure needed for this project. 
 - NGINX is a very popular tool that was used in this project to act as a reverse proxy to make the frontend available to the user
 - Kubernetes is a great container orchestration tool and was used in this project to deploy the application to a Kubernetes cluster in AWS EKS.
-## Issues 
-
 ## Authors/Contributors
 Author: Macaulay Farrell, the only contributor was Macaulay Farrell for this project.
 
