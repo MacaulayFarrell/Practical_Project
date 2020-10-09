@@ -29,12 +29,12 @@ module "aws_EC2_instances" {
   associate_public_ip_address = true
 }
 
-module "aws_eks_cluster" {
-  source = "./EKS-Cluster"
-  subnet_ids = module.aws_vpc.public_subnetA_id
-  subnet_ids_2 = module.aws_vpc.public_subnetB_id
-  security_group_id = module.aws_security_group.security-group_id
-}
+#module "aws_eks_cluster" {
+#  source = "./EKS-Cluster"
+#  subnet_ids = module.aws_vpc.public_subnetA_id
+#  subnet_ids_2 = module.aws_vpc.public_subnetB_id
+#  security_group_id = module.aws_security_group.security-group_id
+#}
 
 
 
