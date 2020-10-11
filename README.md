@@ -2,7 +2,7 @@
 This is the repo for my second SFIA project at the Academy.
 # Python Flask Application Deployment 
 ## Resources
-* Presentation: [Click here]()
+* Presentation: [Click here](https://docs.google.com/presentation/d/1NJpYo0K-EeJBOkFFINH8T6LNguUHpQIr4U6fiexdNcs/edit?usp=sharing)
 ## Contents 
 * [Overview](#overview)
    * [Brief](#brief)
