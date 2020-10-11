@@ -2,7 +2,7 @@
 This is the repo for my second SFIA project at the Academy.
 # Python Flask Application Deployment 
 ## Resources
-* Presentation: [Click here]()
+* Presentation: [Click here](https://docs.google.com/presentation/d/1NJpYo0K-EeJBOkFFINH8T6LNguUHpQIr4U6fiexdNcs/edit?usp=sharing)
 ## Contents 
 * [Overview](#overview)
    * [Brief](#brief)
@@ -38,7 +38,7 @@ You can find a screenshot of the Kanban board built on Jira below:
 ### CI Pipeline
 Jenkins was used as the CI server to deploy the application. Webhooks were used to ensure that when a user pushes to the repository, it kicks of the Jenkins pipeline.
 - Development: Jenkinsfile1 is the file used for the test environment, it uses SSH to deploy the app onto a virtual machine for testing purposes and stores the python test results in a file in the directory. 
-- Deployment: Jenkinsfile is the file used for deployment. 
+- Deployment: Jenkinsfile is the file used for deployment. It essentially builds a frontend image, pushes it to DockerHub and then updates that onto the Kubernetes Cluster. 
 ### Risk Assessment
 You can view the risk assessment for this project below:
 ![risks](images/risk-assessment.JPG)
@@ -52,7 +52,7 @@ You can view the risk assessment for this project below:
 - Ansible is good for configuration management and was used in this project to put Jenkins on the virtual machine
 - Terraform is a Infrastructure as Code tool that was used to create the infrastructure needed for this project. 
 - NGINX is a very popular tool that was used in this project to act as a reverse proxy to make the frontend available to the user
-- Kubernetes is a great container orchestration tool and was used in this project to deploy the application to a Kubernetes cluster in AWS EKS.
+- Kubernetes is a great container orchestration tool and was used in this project to deploy the application to a Kubernetes cluster in GCP as it is free, however AWS EKS was also tested using the terraform config. 
 ## Authors/Contributors
 Author: Macaulay Farrell, the only contributor was Macaulay Farrell for this project.
 
