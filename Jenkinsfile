@@ -5,11 +5,6 @@ pipeline{
             rollback = 'false'
         }
         stages{
-            stage('Install docker-docker compose') {
-                steps {
-                    sh 'cd scripts/ && chmod +x docker-install.sh && ./docker-install.sh'
-                }
-            }
             stage('Build Image'){
                 steps{
                     script{
