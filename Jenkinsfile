@@ -39,6 +39,7 @@ pipeline{
                     kubectl apply -f config-map.yaml
                     sleep 25 
                     kubectl get services 
+                    
                     '''
                 }
             }
