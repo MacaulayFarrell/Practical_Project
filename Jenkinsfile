@@ -1,7 +1,11 @@
 pipeline{
         agent any
         environment {
+<<<<<<< HEAD
             app_version = 'v2'
+=======
+            app_version = 'v3'
+>>>>>>> development
             rollback = 'false'
         }
         stages{
@@ -25,7 +29,7 @@ pipeline{
                     }
                 }          
             }
-            stage('Environment setup'){
+            stage('Deploy into Kubernetes Cluster'){
                 steps{
                     sh '''
                     cd kubernetes
