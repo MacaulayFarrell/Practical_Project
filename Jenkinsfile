@@ -30,8 +30,8 @@ pipeline{
                     sh '''
                     cd kubernetes
                     export app_version=$app_version
-                    export DATABASE_URI=$DATABASE_URI
-                    export TEST_DATABASE_URI=$TEST_DATABASE_URI
+                    export DATABASE_URI=$dburl
+                    export TEST_DATABASE_URI=$tdburl
                     export SECRET_KEY=$SECRET_KEY
                     envsubst < backend.yaml | kubectl apply -f -
                     envsubst < frontend.yaml | kubectl apply -f -
